@@ -45,13 +45,13 @@ namespace XmlValueSetter
                 throw new ArgumentException("The XML file doesn't contain any node by the specified XPath.");
             }
 
-            // ReSharper disable once PossibleNullReferenceException
             if (string.IsNullOrEmpty(attribute))
             {
                 node.InnerText = value;
             }
             else
             {
+                // ReSharper disable once PossibleNullReferenceException
                 node.Attributes[attribute].InnerText = value;
             }
 
